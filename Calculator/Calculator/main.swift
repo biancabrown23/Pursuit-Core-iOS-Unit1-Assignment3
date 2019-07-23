@@ -8,6 +8,16 @@
 
 import Foundation
 
+func userGreeting(message: String) -> String {
+    print(message)
+    let input: String = readLine()!
+    if input == "" {
+        return userGreeting(message: "I didnt quite catch that, try again?")
+    } else {
+        return input
+    }
+}
+
 func mathStuffFactory(opString: String) -> (Double, Double) -> Double {
   switch opString {
   case "+":
